@@ -1,1 +1,1 @@
-export { FRui } from './FRui.js';
+export * from './counter-thing/index';
