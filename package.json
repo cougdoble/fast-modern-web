@@ -6,12 +6,12 @@
   "version": "0.0.0",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
+  "type": "module",
   "exports": {
-    ".": "./dist/src/index.js",
-    "./f-rui.js": "./dist/src/f-rui.js"
+    ".": "./dist/src/index.js"
   },
   "scripts": {
-    "analyze": "cem analyze --fastelement",
+    "analyze": "cem analyze --fast",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "tsc && npm run analyze -- --exclude dist",
     "prepublish": "tsc && npm run analyze -- --exclude dist",
@@ -33,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@web/dev-server": "^0.1.28",
+    "@web/dev-server-esbuild": "^0.2.16",
     "@web/dev-server-storybook": "next",
     "@web/test-runner": "next",
     "concurrently": "^5.3.0",
